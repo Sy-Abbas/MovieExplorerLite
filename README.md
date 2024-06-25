@@ -1,79 +1,164 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Movie Explorer Lite
 
-# Getting Started
+**Movie Explorer Lite** is a React Native application developed as part of a technical assessment. The app allows users to browse and search for movies using the TMDB (The Movie Database) API. It features a home screen displaying a list of popular movies, a search functionality to find specific movies, and an optional onboarding screen.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Project Description
 
-## Step 1: Start the Metro Server
+### Features
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+1. **Onboarding Screens (Optional)**:
+   - Visually appealing onboarding screens introducing the core features of the app (e.g., search and browse movies).
+   - Potential use of animations or interactive elements to enhance user engagement.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+2. **Home Screen**:
+   - Displays a list of movies retrieved from the TMDB API.
+   - Each movie item showcases the title and a poster image.
+   - Includes a search bar at the top for users to search movies by title.
 
-```bash
-# using npm
-npm start
+### Public API
 
-# OR using Yarn
-yarn start
-```
+- **TMDB API**: [TMDB API Documentation](https://developer.themoviedb.org/docs/getting-started)
 
-## Step 2: Start your Application
+## Technical Requirements
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+1. **React Native CLI**:
+   - Use the latest stable version of React Native CLI for project setup (no Expo).
 
-### For Android
+2. **JavaScript**:
+   - Write clean, readable, and well-documented JavaScript code.
+   - Adhere to established React Native best practices.
 
-```bash
-# using npm
-npm run android
+3. **API Integration**:
+   - Utilize the TMDB API to fetch movie data using JavaScript's fetch API or a library like Axios.
+   - Implement a search functionality using the API's search endpoint.
+   - Gracefully handle API loading states and potential errors.
 
-# OR using Yarn
-yarn android
-```
+4. **State Management**:
+   - Manage application state using React's built-in useState hook (no Redux).
 
-### For iOS
+5. **UI/UX**:
+   - Create an attractive and intuitive user interface for browsing movies, including both the onboarding screens (if applicable) and the home screen.
+   - Adhere to best practices for mobile app design to ensure a positive user experience.
 
-```bash
-# using npm
-npm run ios
+## Deliverables
 
-# OR using Yarn
-yarn ios
-```
+1. **Source Code**:
+   - Submit the complete source code of the project on a public GitHub repository.
+   - Include a comprehensive README file with setup instructions using React Native.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+2. **Screen Recording**:
+   - Upload a screen recording of your entire development process as a video file.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+3. **Running Application**:
+   - Provide a running version of the application built using React Native CLI.
 
-## Step 3: Modifying your App
+## Evaluation Criteria
 
-Now that you have successfully run the app, let's modify it.
+1. **Code Quality**:
+   - Focus on clean, readable, and well-documented JavaScript code.
+   - Adhere to established React Native best practices.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+2. **Functionality**:
+   - Verify that the application fulfills all features outlined in the project description, including both the onboarding screens (if applicable) and the home screen functionality.
+   - Ensure seamless and error-free interaction with the TMDB API.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+3. **UI/UX**:
+   - Evaluate the overall user interface for attractiveness and user-friendliness across both onboarding screens (if applicable) and the home screen.
+   - Consider design consistency and responsiveness across different screen sizes.
 
-## Congratulations! :tada:
+4. **Problem Solving**:
+   - Assess your ability to handle potential errors and edge cases during development.
+   - Evaluate how efficiently you manage the application state using useState.
 
-You've successfully run and modified your React Native App. :partying_face:
+5. **Communication**:
+   - In your screen recording, clearly explain your development process, reasoning behind design decisions (including onboarding screens if applicable), and implemented solutions.
 
-### Now what?
+## Setup Instructions
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+### Prerequisites
 
-# Troubleshooting
+- Node.js
+- npm or yarn
+- React Native CLI
+- Android Studio (for Android development) or Xcode (for iOS development)
+
+### Steps
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/yourusername/movie-explorer-lite.git
+   cd movie-explorer-lite
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Add TMDB API Key**
+
+   Create a `.env` file in the root directory and add your TMDB API key:
+
+   ```plaintext
+   TMDB_API_KEY=your_api_key_here
+   ```
+
+4. **Start the Metro Server**
+
+   To start Metro, run the following command from the root of your React Native project:
+
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
+
+5. **Run the Application**
+
+   Let Metro Bundler run in its own terminal. Open a new terminal from the root of your React Native project. Run the following command to start your Android or iOS app:
+
+   For Android:
+
+   ```bash
+   npm run android
+   # or
+   yarn android
+   ```
+
+   For iOS:
+
+   ```bash
+   npx pod-install ios
+   npm run ios
+   # or
+   yarn ios
+   ```
+
+6. **Modify the App**
+
+   - Open `App.js` in your text editor of choice and edit some lines.
+   - For Android: Press the <kbd>R</kbd> key twice or select "Reload" from the Developer Menu (Ctrl + M (on Windows and Linux) or Cmd ⌘ + M (on macOS)) to see your changes!
+   - For iOS: Hit Cmd ⌘ + R in your iOS Simulator to reload the app and see your changes!
+
+## Troubleshooting
 
 If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-# Learn More
+## Learn More
 
 To learn more about React Native, take a look at the following resources:
 
 - [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - an overview of React Native and how to set up your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a guided tour of the React Native basics.
+- [TMDB API Documentation](https://developer.themoviedb.org/docs) - learn more about the TMDB API.
+- [Blog](https://reactnative.dev/blog) - read the latest official React Native Blog posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source GitHub repository for React Native.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
